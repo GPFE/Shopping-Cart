@@ -3,6 +3,7 @@ import ProductList from './components/ProductList'
 import { useEffect, useState } from 'react'
 import { Spinner } from '@chakra-ui/react'
 import axios from 'axios'
+import { Box } from '@chakra-ui/react'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -17,9 +18,9 @@ function App() {
   }, [])
 
   return (
-    <>
+    <Box pt={"2rem"}>
       {isLoading ? <Spinner /> : <ProductList products={products} />}
-    </>
+    </Box>
   )
 }
 

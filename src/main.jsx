@@ -5,15 +5,25 @@ import App from './App.jsx'
 import LandingPage from './components/LandingPage.jsx'
 import { ChakraProvider } from "@chakra-ui/react"
 import { createBrowserRouter, RouterProvider } from 'react-router'
+import NavBar from './components/NavBar.jsx'
 
 const router = createBrowserRouter([
   ...["/", "home" ].map(path => {
     return {
       path: path,
-      element: <LandingPage />
+      element: <>
+        <NavBar />
+        <LandingPage />
+      </>
     }
-  })
-
+  }),
+  {
+    path: "shop",
+    element: <>
+      <NavBar />
+      <App />
+    </>
+  }
 ])
 
 createRoot(document.getElementById('root')).render(

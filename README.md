@@ -27,3 +27,4 @@ A simple shopping cart SPA built with React, showcasing routing, state managemen
 - make it mobile-friendly
 - add more description to the landing page
 - check before submitting to pay
+- add categories

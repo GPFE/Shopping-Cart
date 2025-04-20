@@ -20,7 +20,9 @@ export default function NavBar() {
       borderRadius={"1rem"}
       px={"1rem"}
     >
-      <Box fontWeight={"bold"}>Fake shop</Box>
+      <Link to={"/"}>
+        <Box fontWeight={"bold"}>Fake shop</Box>
+      </Link>
       <Flex
         gap={"1rem"}
         backdropFilter={"auto"}

@@ -1,12 +1,29 @@
-# React + Vite
+## 🛍️ React Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple shopping cart SPA built with React, showcasing routing, state management, component architecture, and API integration.
 
-Currently, two official plugins are available:
+### 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏠 **Home Page**  
+  Custom content to demonstrate routing and layout. Add images, info, or anything you'd like.
+  
+- 🛒 **Shop Page**  
+  - Displays product cards fetched from FakeStore API  
+  - Each card includes:
+    - Product title
+    - Quantity input with increment/decrement buttons
+    - “Add to Cart” button
+  - Navigation bar with cart item count and “Checkout” button
+  - Updates cart dynamically after adding items
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔁 **Navigation Bar**  
+  - Persistent across pages  
+  - Links to Home and Shop  
+  - Shows total items in cart  
+  - “Go to Cart” button (checkout logic not implemented)
+- **To-do**
+- test with vitest
+- improve adding to cart system
+- make it mobile-friendly
+- add more description to the landing page
+- check before submitting to pay

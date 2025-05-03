@@ -28,3 +28,11 @@ A simple shopping cart SPA built with React, showcasing routing, state managemen
 - add more description to the landing page
 - check before submitting to pay
 - add categories
+  
+-----------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/433c5db0-d4e3-4ae3-814c-81ccf3309653)
+------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/7deba845-7cb5-46b5-8f7b-6b0a589ceed8)
+------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/b9d99ecd-08db-4838-8660-aba71a40c2d7)
+------------------------------------------------------------------------------------------

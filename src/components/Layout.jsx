@@ -25,7 +25,6 @@ export default function Layout() {
         element: <>
           <NavBar />
           <App />
-          <Outlet />
         </>
       },
       {

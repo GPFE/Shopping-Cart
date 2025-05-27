@@ -8,7 +8,7 @@ function App() {
   const { isLoading, products } = useProducts()
 
   return (
-    <Box pt={"2rem"}>
+    <Box width="calc(20rem + 40vw)" maxWidth="1280px" pt={"2rem"}>
       {isLoading ? <Spinner /> : <ProductList products={products} />}
     </Box>
   );

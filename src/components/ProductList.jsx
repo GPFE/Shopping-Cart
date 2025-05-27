@@ -4,7 +4,7 @@ import { Grid, GridItem } from "@chakra-ui/react";
 export default function ProductList ({ products }) {
   return (
     <Grid
-     templateColumns="repeat(auto-fill, minmax(20rem, 1fr))" gap={4}>
+     templateColumns="repeat(auto-fill, minmax(20rem, 1fr))" gap="1rem">
       {products.map((product) => (
         <GridItem key={product.id}>
           <ProductCard product={product} />

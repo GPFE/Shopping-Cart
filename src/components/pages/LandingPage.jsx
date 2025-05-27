@@ -137,7 +137,21 @@ export default function LandingPage() {
         </AccordionItem>
       </Accordion>
       <Link to={"/shop"}>
-        <Button>Explore</Button>
+        <Button
+          backgroundColor="blue.700"
+          color="white"
+          colorScheme="blue"
+          _hover={{
+            transform:"scale(1.1)",
+            cursor: "pointer"
+          }}
+          rightIcon={
+          <Box
+            backgroundColor="blue.600"
+            borderRadius="69rem"
+            color="white"
+          ><HugeiconsIcon icon={ArrowRight01Icon} /></Box>
+          }>Explore</Button>
       </Link>
       <footer>...</footer>
     </Grid>

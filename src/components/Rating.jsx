@@ -15,8 +15,11 @@ export default function Rating({ stars, maxStars = 5 }) {
             x2="100%"
             y2="100%"
           >
-            <stop offset="0%" stopColor="#00d8ff" />
-            <stop offset="100%" stopColor="#007acc" />
+          {/* <stop offset="0%" stopColor="#00d8ff" />
+          <stop offset="100%" stopColor="#007acc" /> old blue versions */}
+          <stop offset="30%" stop-color="#f87171" />
+          <stop offset="100%" stop-color="#a855f7" />
+
           </linearGradient>
         </defs>
         <path

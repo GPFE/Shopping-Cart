@@ -1,13 +1,13 @@
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
 import NavBar from './NavBar.jsx'
 import App from '../App.jsx'
-import LandingPage from './LandingPage.jsx'
+import LandingPage from './pages/LandingPage.jsx'
 import CartProvider from './CartContext.jsx'
-import CartPage from "./CartPage.jsx"
+import CartPage from "./pages/CartPage.jsx"
 import CartStepper from './CartStepper.jsx'
-import PaymentPage from './PaymentPage.jsx'
-import DeliveryPage from './DeliveryPage.jsx'
-import ThanksPage from './ThanksPage.jsx'
+import PaymentPage from './pages/PaymentPage.jsx'
+import DeliveryPage from './pages/DeliveryPage.jsx'
+import ThanksPage from './pages/ThanksPage.jsx'
 
 export default function Layout() {
     const router = createBrowserRouter([

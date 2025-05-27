@@ -1,4 +1,4 @@
-import PaymentRadio from "./PaymentRadio";
+import PaymentRadio from "../PaymentRadio";
 import { Button, useRadioGroup, VStack } from "@chakra-ui/react";
 import { Link } from "react-router";
 import { ArrowForwardIcon } from "@chakra-ui/icons";

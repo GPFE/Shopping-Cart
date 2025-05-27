@@ -16,7 +16,9 @@ export default function ProductCard({ product }) {
   const {addToCart} = useContext(CartContext)
 
   return (
-    <Card>
+    <Card
+      height="100%"
+    >
       <Center>
         <Image
           p="1rem"

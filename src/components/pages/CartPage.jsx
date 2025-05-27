@@ -1,8 +1,8 @@
 import { Card, CardBody, Button, Grid, Text, Heading, Image, ButtonGroup, IconButton, Center, Spinner, Container } from "@chakra-ui/react"
 import { AddIcon, ArrowForwardIcon, MinusIcon } from "@chakra-ui/icons"
 import { useContext } from "react"
-import { CartContext } from "./CartContext"
-import useProducts from "../hooks/useProducts"
+import { CartContext } from "../CartContext"
+import useProducts from "../../hooks/useProducts"
 import { Link } from "react-router"
 
 const findProductByName = (products, name) => {

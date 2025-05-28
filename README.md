@@ -30,9 +30,4 @@ A simple shopping cart SPA built with React, showcasing routing, state managemen
 - add categories
   
 -----------------------------------------------------------------------------------------
-![image](https://github.com/user-attachments/assets/433c5db0-d4e3-4ae3-814c-81ccf3309653)
-------------------------------------------------------------------------------------------
-![image](https://github.com/user-attachments/assets/7deba845-7cb5-46b5-8f7b-6b0a589ceed8)
-------------------------------------------------------------------------------------------
-![image](https://github.com/user-attachments/assets/b9d99ecd-08db-4838-8660-aba71a40c2d7)
-------------------------------------------------------------------------------------------
+![fake_shop_square_landing_page](https://github.com/user-attachments/assets/88e1044c-3de3-4b9b-8878-3154c0bb2209)

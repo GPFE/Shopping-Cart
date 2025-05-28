@@ -21,6 +21,7 @@ export default function ProductCard({ product }) {
   return (
     <Card
       height="100%"
+      width="100%"
     >
       <Center>
         <Image

@@ -29,3 +29,5 @@ A simple shopping cart SPA built with React, showcasing routing, state managemen
   
 -----------------------------------------------------------------------------------------
 ![fake_shop_square_landing_page](https://github.com/user-attachments/assets/88e1044c-3de3-4b9b-8878-3154c0bb2209)
+-----------------------------------------------------------------------------------------
+![fake_shop_products_page_mobile](https://github.com/user-attachments/assets/55566095-e36f-4b76-8254-92fcf81afbb8)

@@ -24,8 +24,6 @@ A simple shopping cart SPA built with React, showcasing routing, state managemen
 - **To-do**
 - test with vitest
 - improve adding to cart system
-- make it mobile-friendly
-- add more description to the landing page
 - check before submitting to pay
 - add categories
   

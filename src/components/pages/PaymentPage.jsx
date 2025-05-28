@@ -30,7 +30,7 @@ export default function PaymentPage(props) {
             </VStack>
             <div style={{marginTop: "1rem"}}>
                 <Link to={"/cart/delivery"}>
-                    <Button backgroundColor={"green.600"} color={"white"} rightIcon={<ArrowForwardIcon />}>Next</Button>
+                    <Button backgroundColor={"green.600"} _hover={{transform: "scale(1.1)"}} colorScheme="green" color={"white"} rightIcon={<ArrowForwardIcon />}>Next</Button>
                 </Link>
             </div>
         </>

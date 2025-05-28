@@ -1,4 +1,4 @@
-import { Card, CardBody, Button, Grid, Text, Heading, Image, ButtonGroup, IconButton, Center, Spinner, Container } from "@chakra-ui/react"
+import { Card, Box, CardBody, Button, Grid, Text, Heading, Image, ButtonGroup, IconButton, Center, Spinner, Container } from "@chakra-ui/react"
 import { AddIcon, ArrowForwardIcon, MinusIcon } from "@chakra-ui/icons"
 import { useContext } from "react"
 import { CartContext } from "../CartContext"
@@ -14,7 +14,7 @@ const generateCaption = (description) => {
 }
 
 const generateTitle = (title) => {
-    return title.substring(0, 25).concat("...");
+    return title.split(" ").splice(0, 6).join(" ") 
 }
 
 
@@ -31,7 +31,7 @@ export default function CartPage() {
     }
 
     return(
-        <Container maxW={"1200px"} pt={"1rem"}>
+        <Container maxW={"1000px"} pt={"1rem"}>
             <Grid gridAutoRows={"15rem"} gap={".8rem"}>
                 {
                     isLoading ? <Spinner /> : Object.keys(cart).map((productName, index) => {
@@ -47,7 +47,6 @@ export default function CartPage() {
                                 "count": 500
                             }
                             }
-                        const caption = generateCaption(product.description)
                         return (
                         <Card key={index} borderRadius={"lg"}>
                             <Grid templateColumns={"3fr 5fr"}>
@@ -60,7 +59,9 @@ export default function CartPage() {
                                 />
                                 <CardBody>
                                     <Heading>{generateTitle(productName)}</Heading>
-                                    <Text opacity={.8}>{caption}</Text>
+                                    <CardBody fontSize="2xl" p="0 2rem">
+                                        <Box borderRadius="1rem" backgroundColor="orange.200" fontSize="2xl">{`$${product.price}`}</Box>
+                                    </CardBody>
                                     <ButtonGroup pt={"1.8rem"} isAttached variant={"outline"}>
                                         <IconButton onClick={() => addToCart(product.title, 1)} aria-label="Increase product count" icon={<AddIcon />} />
                                         <Center maxW={"sm"} borderWidth={"1px"} px={"1rem"}>{cart[productName]}</Center>
@@ -73,7 +74,7 @@ export default function CartPage() {
             </Grid>
             <div style={{marginTop: "1rem"}}>
                 <Link to={"payment"}>
-                    <Button backgroundColor={"green.600"} color={"white"} rightIcon={<ArrowForwardIcon />}>Next</Button>
+                    <Button colorScheme="green" _hover={{transform: "scale(1.1)"}} backgroundColor={"green.600"} color={"white"} rightIcon={<ArrowForwardIcon />}>Next</Button>
                 </Link>
             </div>
         </Container>

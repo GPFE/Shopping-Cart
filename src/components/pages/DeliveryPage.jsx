@@ -33,7 +33,7 @@ export default function DeliveryPage() {
             </FormControl>
             <div style={{marginTop: "1rem"}}>
                 <Link to={"/thanks"}>
-                    <Button type="submit" backgroundColor={"green.600"} color={"white"} rightIcon={<CheckIcon />}>Submit</Button>
+                    <Button type="submit" colorScheme="green" _hover={{transform: "scale(1.2)"}} backgroundColor={"green.600"} color={"white"} rightIcon={<CheckIcon />}>Submit</Button>
                 </Link>
             </div>
         </form>

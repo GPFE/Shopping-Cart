@@ -16,18 +16,22 @@ import {
   Heading,
   Text,
   Button,
+  CardHeader,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import reactShop from "../../../public/images/react_shop.png";
 import react_guy from "../../../public/images/react_guy.png";
 import Rating from "./../Rating";
 import { Link } from "react-router-dom";
-import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
+import { ApiIcon, ArrowRight01Icon, Css3Icon, Html5Icon, JavaScriptIcon, ReactIcon, Router02Icon, ZapIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import SuggesterCard from "../SuggesterCard";
+import TechnologyCard from "../TechnologyCard";
 
 export default function LandingPage() {
   const catHight = "15rem";
   const starSize = "1rem";
+  const [isWiderThan750] = useMediaQuery("(min-width: 750px)")
 
   return (
     <Grid gap="1rem" pt={"2rem"} maxWidth={"1000px"}>
@@ -36,7 +40,7 @@ export default function LandingPage() {
           p={"1rem"}
           bgGradient="linear(blue.300, cyan.400)"
         >
-          <HStack spacing={"1rem"}>
+          <HStack flexWrap={isWiderThan750 ? "" : "wrap"} gap="1rem" spacing={"1rem"}>
             <Stack
               backdropBlur="8rem"
               bgGradient="linear(to-r, whiteAlpha.600, whiteAlpha.500)"
@@ -77,6 +81,7 @@ export default function LandingPage() {
             <Image
               src={reactShop}
               borderRadius="1rem"
+              margin={isWiderThan750 ? "" : "0 auto"}
             />
           </HStack>
         </Card>
@@ -86,7 +91,7 @@ export default function LandingPage() {
         borderRadius=".5rem"
         p={"2rem"}
       >
-        <Grid gridTemplateColumns={"1fr 1fr 1fr"} gap={"1rem"}>
+        <Grid gridTemplateColumns="repeat(auto-fit, minmax(14rem, 1fr))" gap={"1rem"}>
           <SuggesterCard
             imageHeight={catHight}
             image={react_guy}
@@ -111,29 +116,67 @@ export default function LandingPage() {
           />
         </Grid>
       </Box>
-      <Accordion>
+      <Accordion
+        bgGradient="linear(red.100, orange.200)"
+        borderRadius=".5rem"
+        allowMultiple
+        allowToggle
+      >
         <AccordionItem>
           <h2>
             <AccordionButton>
               <Box as="span" fontWeight={800} flex={1} textAlign={"left"}>
-                Made with Chakra ui
+                What technologies are used to build Fake Shop?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4}>chakra</AccordionPanel>
+          <AccordionPanel display="grid" gridTemplateColumns="repeat(auto-fill, minmax(15rem, 1fr))" gap="1rem" pb={4}>
+            <TechnologyCard
+              title="React"
+              icon={ReactIcon}
+            />
+            <TechnologyCard
+              title="Chakra UI"
+              icon={ZapIcon}
+            />
+            <TechnologyCard
+              title="React Router"
+              icon={Router02Icon}
+            />
+            <TechnologyCard
+              title="Context API"
+              icon={ApiIcon}
+            />
+            <TechnologyCard
+              title="JavaScript"
+              icon={JavaScriptIcon}
+            />
+            <TechnologyCard
+              title="HTML 5"
+              icon={Html5Icon}
+            />
+            <TechnologyCard
+              title="CSS 3"
+              icon={Css3Icon}
+            />
+          </AccordionPanel>
         </AccordionItem>
 
         <AccordionItem>
           <h2>
             <AccordionButton>
               <Box textAlign={"left"} flex={1} fontWeight={800}>
-                Made with React
+                How is the shopping cart functionality implemented?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>react</AccordionPanel>
+          <AccordionPanel>
+            <Card>
+              <CardBody>The cart is managed using <strong>React’s Context API</strong>. Cart data is stored in a global context, which allows components across the app (like product listings and the cart page) to access and modify cart state.</CardBody>
+            </Card>
+          </AccordionPanel>
         </AccordionItem>
       </Accordion>
       <Link to={"/shop"}>
@@ -153,7 +196,9 @@ export default function LandingPage() {
           ><HugeiconsIcon icon={ArrowRight01Icon} /></Box>
           }>Explore</Button>
       </Link>
-      <footer>...</footer>
+      <footer>
+        <Box mt="3rem">Proudly made in 🇨🇿 by <Link style={{textDecoration: "underline"}} to="https://arnost-portfolio.netlify.app/">Arnošt Havelka</Link></Box>
+      </footer>
     </Grid>
   );
 }

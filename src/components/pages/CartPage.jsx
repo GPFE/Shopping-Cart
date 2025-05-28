@@ -32,7 +32,7 @@ export default function CartPage() {
 
     return(
         <Container maxW={"1000px"} pt={"1rem"}>
-            <Grid gridAutoRows={"15rem"} gap={".8rem"}>
+            <Grid gap={".8rem"}>
                 {
                     isLoading ? <Spinner /> : Object.keys(cart).map((productName, index) => {
                         const product = findProductByName(products, productName) || {

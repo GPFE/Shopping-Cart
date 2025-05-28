@@ -23,6 +23,8 @@ export default function NavBar() {
       zIndex={1}
       borderRadius={"1rem"}
       px={"1rem"}
+      boxShadow={isWiderThan750 ? "none" : ".3rem .3rem .5rem hsla(0, 0.00%, 0.00%, 0.08)"}
+      bgColor={isWiderThan750 ? "" : "white"}
     >
       {
       isWiderThan750 ?
@@ -104,7 +106,6 @@ export default function NavBar() {
       </> :
       <>
         <Button
-          boxShadow=".3rem .3rem .5rem hsla(0, 0.00%, 0.00%, 0.20)"
           onClick={onOpen}
           bgColor="white"
           >            
@@ -148,7 +149,6 @@ export default function NavBar() {
         </DrawerContent>
       </Drawer>
         <Box
-          boxShadow=".3rem .3rem .5rem hsla(0, 0.00%, 0.00%, 0.08)"
           borderRadius="1rem"
         >
         <Link

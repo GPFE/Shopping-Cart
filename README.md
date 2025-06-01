@@ -2,6 +2,9 @@
 
 A simple shopping cart SPA built with React, showcasing routing, state management, component architecture, and API integration.
 
+### Live Demo
+- https://github.com/GPFE/Shopping-Cart/edit/main/README.md
+
 ### 🚀 Features
 
 - 🏠 **Home Page**  
